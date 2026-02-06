@@ -1,0 +1,28 @@
+{
+    "name": "app",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev:api": "tsx watch --tsconfig ./tsconfig.api.json ./src-api/index.ts",
+        "build:api": "tsc --project tsconfig.api.json",
+        "start:api": "node ./dist-api/index.js",
+        "dev:vite": "vite",
+        "build:vite": "tsc && vite build",
+        "preview": "vite preview",
+        "dev": "concurrently \"npm run dev:api\" \"npm run dev:vite\"",
+        "build": "npm run build:api && npm run build:vite",
+        "start": "node ./dist-api/index.js"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.6",
+        "@types/node": "^25.2.1",
+        "concurrently": "^9.2.1",
+        "tsx": "^4.21.0",
+        "typescript": "~5.9.3",
+        "vite": "^7.2.4"
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    }
+}
