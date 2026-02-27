@@ -1,5 +1,5 @@
 import type { Ruta } from './tipos';
-import pagAgregar from './paginas/pagAgregar.js';
+import pagAgregar from './paginas/pagAgregar/pagAgregar.js';
 import pagOtro from './paginas/pagOtro.js';
 
 export default function initRouter(): void {
